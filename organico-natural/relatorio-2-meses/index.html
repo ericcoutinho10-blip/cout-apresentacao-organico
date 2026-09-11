@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Relatório de performance do segundo mês e overview consolidado da parceria entre COUT Group e Orgânico Natural.">
+<title>Relatório Mês 2 + Overview — Orgânico Natural × COUT Group</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════
+   COUT GROUP · Relatório de Performance Mês 2 + Overview
+   Sistema visual preservado do relatório aprovado do Mês 1.
+   ══════════════════════════════════════════════════════════════ */
+:root{
+  --navy:#0F2540;--navy-2:#16324F;--blue:#3F7BD9;--blue-deep:#2C5AA3;
+  --blue-soft:#6C9DE4;--soft:#A7C4F0;--mist:#D8E5F7;--ice:#F7F9FC;
+  --white:#fff;--graphite:#1F2937;--slate:#6B7280;--line:#E5E7EB;
+  --on-green:#2D5A3D;--on-green-soft:#7EC8A0;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:'Instrument Serif','Times New Roman',Times,serif;
+  --cout-mark:url(data:image/png;base64,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);
+  --fs-display:clamp(2.6rem,1.1rem + 5.2vw,5.6rem);
+  --fs-h1:clamp(2rem,1.1rem + 3vw,3.6rem);
+  --fs-h2:clamp(1.5rem,1.05rem + 1.6vw,2.4rem);
+  --fs-lead:clamp(.95rem,.88rem + .35vw,1.18rem);
+  --fs-body:clamp(.85rem,.81rem + .16vw,.98rem);
+  --fs-label:clamp(.62rem,.6rem + .1vw,.72rem);
+  --pad:clamp(1.5rem,1rem + 4vw,6rem);--radius:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;background:var(--navy);color:var(--graphite);line-height:1.55;-webkit-font-smoothing:antialiased}
+button{font:inherit}
+#deck{height:100dvh;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+.slide{min-height:100dvh;scroll-snap-align:start;display:flex;align-items:center;padding:clamp(3.5rem,2rem + 5vh,6rem) var(--pad);position:relative;background:var(--ice)}
+.slide.dark{background:var(--navy);color:var(--white)}
+.slide.white{background:var(--white)}
+.inner{width:100%;max-width:1180px;margin:0 auto}
+.eyebrow{font-size:var(--fs-label);font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:.9rem}
+.dark .eyebrow{color:var(--soft)}
+.title{font-size:var(--fs-h1);font-weight:200;line-height:1.06;letter-spacing:-.02em;color:var(--navy)}
+.dark .title{color:var(--white)}
+.title em{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.1em;letter-spacing:-.01em}
+.title strong{font-weight:500}
+.lead{font-size:var(--fs-lead);font-weight:300;color:var(--slate);max-width:64ch;margin-top:1.1rem}
+.dark .lead{color:rgba(255,255,255,.6)}
+.rule{width:44px;height:2px;background:var(--blue);margin:1.4rem 0 2.2rem}
+.dark .rule{background:var(--blue-soft)}
+.note{font-size:var(--fs-label);color:var(--slate);margin-top:1.25rem;letter-spacing:.01em;line-height:1.6}
+.dark .note{color:rgba(255,255,255,.42)}
+.note strong{font-weight:500;color:var(--navy)}
+.dark .note strong{color:rgba(255,255,255,.8)}
+
+/* capa */
+.cover{background:radial-gradient(1100px 620px at 78% 12%,rgba(63,123,217,.24),transparent 62%),radial-gradient(760px 520px at 8% 92%,rgba(108,157,228,.16),transparent 60%),var(--navy)}
+.marca{display:inline-flex;align-items:center;gap:.62em;line-height:1}
+.marca i{display:block;height:1em;width:1.45em;flex:none;background-color:currentColor;-webkit-mask:var(--cout-mark) no-repeat center/contain;mask:var(--cout-mark) no-repeat center/contain}
+.marca b{font-weight:300;letter-spacing:-.005em;font-size:1.06em}
+.cover-mark{color:var(--white);font-size:clamp(1.1rem,.9rem + .6vw,1.5rem);margin-bottom:clamp(2rem,6vh,4rem)}
+.cover h1{font-size:var(--fs-display);font-weight:200;line-height:1;letter-spacing:-.035em;color:var(--white);max-width:16ch}
+.cover h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--soft);font-size:1.1em;letter-spacing:-.02em}
+.cover-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:clamp(2rem,5vh,3rem)}
+.chip{font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;padding:.55rem 1.1rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.82)}
+.chip.solid{background:var(--blue);border-color:var(--blue);color:#fff}
+.cover-foot{margin-top:clamp(2.5rem,7vh,4.5rem);font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.38)}
+
+/* números e cards */
+.hero-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);overflow:hidden;margin-top:2.2rem}
+.hero-cell{background:var(--navy);padding:clamp(1.4rem,2.6vw,2.2rem)}
+.hero-cell .n{font-size:clamp(2rem,1.1rem + 2.6vw,3.3rem);font-weight:200;letter-spacing:-.03em;line-height:1;color:var(--white);font-variant-numeric:tabular-nums;white-space:nowrap}
+.n u{font-style:normal;text-decoration:none;font-size:.42em;letter-spacing:.04em;margin-left:.2em;opacity:.62;font-weight:300}
+.hero-cell .n.accent{color:var(--soft)}
+.hero-cell .k{font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.85rem}
+.hero-cell .d{font-size:var(--fs-label);color:rgba(255,255,255,.34);margin-top:.35rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:.9rem}
+.kpi{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.35rem 1.25rem;position:relative}
+.kpi::before{content:'';position:absolute;left:1.25rem;top:0;width:26px;height:2px;background:var(--blue)}
+.kpi.g::before{background:var(--on-green)}
+.kpi .n{font-size:clamp(1.45rem,1rem + 1.4vw,2.05rem);font-weight:300;letter-spacing:-.02em;color:var(--navy);line-height:1.05;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpi .n.blue{color:var(--blue-deep)}.kpi .n.green{color:var(--on-green)}
+.kpi .k{font-size:var(--fs-label);letter-spacing:.13em;text-transform:uppercase;color:var(--slate);margin-top:.6rem}
+.kpi .d{font-size:var(--fs-label);color:#9AA3AF;margin-top:.25rem;line-height:1.55}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.35rem,2.2vw,1.9rem)}
+.dark .panel{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+.panel-t{font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:1.2rem;font-weight:500}
+.dark .panel-t{color:rgba(255,255,255,.5)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.43rem 0}
+.row .k{font-size:var(--fs-label);color:var(--slate)}
+.row .v{font-size:.85rem;font-weight:400;color:var(--navy);font-variant-numeric:tabular-nums;text-align:right}
+.dark .row .k{color:rgba(255,255,255,.5)}.dark .row .v{color:#fff}
+.bar{display:grid;grid-template-columns:minmax(74px,auto) 1fr minmax(58px,auto);align-items:center;gap:.85rem;margin-bottom:.65rem}
+.bar:last-child{margin-bottom:0}
+.bar .lb{font-size:var(--fs-label);color:var(--slate);text-align:right;letter-spacing:.02em}
+.dark .bar .lb{color:rgba(255,255,255,.55)}
+.bar .tr{height:8px;background:var(--mist);border-radius:4px;overflow:hidden;display:block}
+.dark .bar .tr{background:rgba(255,255,255,.14)}
+.bar .fl{display:block;height:100%;width:0;border-radius:4px;transition:width 1.1s cubic-bezier(.22,.8,.3,1);background:var(--soft)}
+.bar .fl.deep{background:var(--blue-deep)}.bar .fl.green{background:var(--on-green)}
+.dark .bar .fl{background:rgba(255,255,255,.3)}.dark .bar .fl.deep{background:var(--soft)}
+.bar .vl{font-size:var(--fs-label);font-weight:500;color:var(--navy);text-align:right;font-variant-numeric:tabular-nums}
+.dark .bar .vl{color:var(--white)}
+
+/* composição editorial com evidências */
+.media-split{display:grid;grid-template-columns:minmax(0,1.34fr) minmax(245px,.66fr);gap:1.1rem;align-items:stretch}
+.media-split.equal{grid-template-columns:repeat(2,minmax(0,1fr))}
+.proof{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:.65rem;min-height:0;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(15,37,64,.06)}
+.dark .proof{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);box-shadow:none}
+.proof img{width:100%;height:min(55vh,520px);object-fit:contain;display:block;border-radius:14px;background:#fff}
+.proof.short img{height:min(40vh,380px)}
+.proof figcaption{font-size:.66rem;line-height:1.5;color:var(--slate);padding:.65rem .45rem .25rem}
+.dark .proof figcaption{color:rgba(255,255,255,.46)}
+.proof figcaption b{display:block;font-size:.68rem;font-weight:500;color:var(--navy);margin-bottom:.12rem}
+.dark .proof figcaption b{color:#fff}
+.evidence-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.evidence-pair .proof img{height:min(42vh,390px)}
+
+/* reel */
+.reel{display:grid;grid-template-columns:minmax(250px,.78fr) 1.22fr;gap:0;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+.reel-l{background:linear-gradient(160deg,var(--blue-deep),var(--navy));padding:clamp(1.5rem,2.7vw,2.2rem);display:flex;flex-direction:column;justify-content:center}
+.reel-l .tag{font-size:var(--fs-label);letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-bottom:.9rem}
+.reel-l h3{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.3rem,.9rem + 1.2vw,1.9rem);color:#fff;line-height:1.18}
+.reel-l .sub{font-size:var(--fs-label);color:rgba(255,255,255,.5);margin-top:1rem;line-height:1.85}
+.reel-l .sub b{color:var(--soft);font-weight:400}
+.reel-r{background:rgba(255,255,255,.05);padding:clamp(1.3rem,2.4vw,1.9rem);display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem .75rem;align-content:center}
+.rm .n{font-size:clamp(1.12rem,.85rem + .85vw,1.55rem);font-weight:300;color:#fff;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rm .n.accent{color:var(--soft)}
+.rm .k{font-size:var(--fs-label);color:rgba(255,255,255,.45);margin-top:.4rem;letter-spacing:.05em}
+.bench{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}
+.bc{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.15rem}
+.bc .n{font-size:clamp(1.3rem,1rem + 1.1vw,1.8rem);font-weight:300;color:var(--navy);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.bc .k{font-size:var(--fs-label);color:var(--slate);margin-top:.5rem;letter-spacing:.08em;text-transform:uppercase}
+.bc .f{display:inline-flex;align-items:center;gap:.35rem;margin-top:.65rem;font-size:var(--fs-label);font-weight:500;letter-spacing:.04em}
+.bc .f.up{color:var(--blue-deep)}.bc .f.dn{color:var(--on-green)}.bc .f.att{color:var(--slate)}
+
+/* leitura e comparativos */
+.insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.9rem}
+@media (min-width:761px){.insights{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.insight{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:1.4rem}
+.dark .insight{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+.insight .i{font-family:var(--serif);font-size:2.2rem;color:var(--blue-soft);opacity:.55;line-height:1}
+.insight h4{font-size:.88rem;font-weight:500;color:var(--navy);margin-top:.65rem;line-height:1.35}
+.dark .insight h4{color:#fff}
+.insight p{font-size:var(--fs-body);color:var(--slate);margin-top:.55rem;line-height:1.62}
+.dark .insight p{color:rgba(255,255,255,.55)}
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.9rem}
+.compare-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:1.25rem}
+.compare-card .metric{font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--slate);font-weight:500;min-height:2.8em}
+.compare-card .periods{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:.85rem}
+.compare-card .period{border-top:1px solid var(--line);padding-top:.65rem}
+.compare-card .period small{display:block;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#9AA3AF}
+.compare-card .period b{display:block;font-size:1.15rem;font-weight:300;color:var(--navy);font-variant-numeric:tabular-nums;margin-top:.18rem;white-space:nowrap}
+.compare-card .delta{display:inline-flex;margin-top:.8rem;padding:.34rem .65rem;border-radius:999px;background:var(--ice);font-size:.63rem;font-weight:500;letter-spacing:.07em;color:var(--slate)}
+.compare-card .delta.up{background:rgba(63,123,217,.1);color:var(--blue-deep)}
+.compare-card .delta.down{background:#F2F4F7;color:var(--slate)}
+.compare-card .delta.same{background:rgba(45,90,61,.09);color:var(--on-green)}
+.compare-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:table}
+.compare-table th,.compare-table td{padding:.78rem 1rem;border-bottom:1px solid var(--line);font-size:var(--fs-label);text-align:right;font-variant-numeric:tabular-nums}
+.compare-table th:first-child,.compare-table td:first-child{text-align:left}
+.compare-table th{letter-spacing:.12em;text-transform:uppercase;color:var(--slate);font-weight:500;background:var(--ice)}
+.compare-table td{color:var(--navy)}
+.compare-table tr:last-child td{border-bottom:0}
+.compare-table .muted{color:var(--slate)}
+.compare-table .focus{color:var(--blue-deep);font-weight:500}
+.context-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:.9rem}
+.context-strip > div{background:var(--white);padding:1.1rem}
+.context-strip b{font-size:1.08rem;font-weight:300;color:var(--navy);display:block}
+.context-strip span{font-size:var(--fs-label);color:var(--slate);display:block;margin-top:.2rem}
+
+/* evidências */
+.filters{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.3rem}
+.ft{font-family:var(--sans);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;padding:.5rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--slate);cursor:pointer;transition:.18s;font-weight:400}
+.ft:hover{border-color:var(--soft);color:var(--blue-deep)}.ft.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.85rem;max-height:49vh;overflow-y:auto;padding-right:.4rem}
+.gal::-webkit-scrollbar{width:5px}.gal::-webkit-scrollbar-thumb{background:var(--mist);border-radius:3px}
+.sh{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:zoom-in;transition:.2s;display:flex;flex-direction:column}
+.sh:hover{border-color:var(--soft);transform:translateY(-2px);box-shadow:0 8px 22px rgba(15,37,64,.08)}
+.sh img{width:100%;height:min(31vh,285px);object-fit:contain;display:block;background:#fff}
+.sh .cap{padding:.62rem .68rem .72rem;font-size:.64rem;line-height:1.4;color:var(--slate);border-top:1px solid var(--line)}
+.sh .cap b{display:block;color:var(--navy);font-weight:500;margin-bottom:.15rem;font-size:.67rem}
+#lb{position:fixed;inset:0;background:rgba(10,20,35,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:2.5rem 1.5rem;cursor:zoom-out}
+#lb.on{display:flex}#lb img{max-width:min(520px,90vw);max-height:86dvh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+#lb .lbcap{position:absolute;bottom:1.2rem;left:0;right:0;text-align:center;color:rgba(255,255,255,.7);font-size:var(--fs-label);letter-spacing:.04em;padding:0 1.5rem}
+#lb .x{position:absolute;top:1.2rem;right:1.4rem;color:rgba(255,255,255,.65);font-size:1.6rem;line-height:1;cursor:pointer}
+
+/* navegação e movimento */
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--blue);width:0;z-index:120;transition:width .18s linear}
+#dots{position:fixed;right:clamp(.7rem,1.6vw,1.5rem);top:50%;transform:translateY(-50%);z-index:120;display:flex;flex-direction:column;gap:.48rem}
+#dots b{width:7px;height:7px;border-radius:50%;background:var(--soft);opacity:.32;cursor:pointer;transition:.22s;display:block;border:0;padding:0}
+#dots b:hover{opacity:.7}#dots b.on{opacity:1;transform:scale(1.45);background:var(--blue)}
+#hud{position:fixed;left:clamp(1rem,2vw,2rem);bottom:clamp(.9rem,2vh,1.4rem);z-index:120;font-size:.78rem;color:var(--slate);opacity:.72;pointer-events:none;transition:color .3s}
+#hud.inv{color:rgba(255,255,255,.55)}
+#count{position:fixed;right:clamp(1.6rem,3.4vw,3rem);bottom:clamp(.9rem,2vh,1.4rem);z-index:120;font-size:.62rem;letter-spacing:.2em;color:var(--slate);font-variant-numeric:tabular-nums;pointer-events:none}
+#count.inv{color:rgba(255,255,255,.42)}
+#hint{position:fixed;left:50%;transform:translateX(-50%);bottom:clamp(.9rem,2vh,1.4rem);z-index:120;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);transition:opacity .4s;pointer-events:none}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.22,.8,.3,1),transform .7s cubic-bezier(.22,.8,.3,1)}
+.rv.in{opacity:1;transform:none}.rv[data-d="1"]{transition-delay:.08s}.rv[data-d="2"]{transition-delay:.16s}.rv[data-d="3"]{transition-delay:.24s}.rv[data-d="4"]{transition-delay:.32s}
+
+@media (max-height:950px) and (min-width:761px){
+  .slide{padding-top:2.5rem;padding-bottom:2.5rem}.rule{margin:1rem 0 1.45rem}.lead{margin-top:.72rem}
+  .hero-grid{margin-top:1.4rem}.proof img{height:min(44vh,400px)}.proof.short img{height:min(28vh,260px)}
+  .evidence-pair .proof img{height:min(32vh,300px)}.gal{max-height:42vh}
+  .compare-card{padding:1rem}.compare-card .periods{margin-top:.6rem}.insight{padding:1.1rem}
+}
+@media (max-width:900px){
+  .reel{grid-template-columns:1fr}.reel-r{grid-template-columns:repeat(2,1fr)}
+  .media-split,.media-split.equal{grid-template-columns:1fr}.proof img{height:min(48vh,470px)}
+}
+@media (max-width:760px){
+  #deck{scroll-snap-type:none}.slide{min-height:auto;padding-top:4rem;padding-bottom:4rem}
+  #dots,#hint{display:none}.gal{max-height:none}.context-strip{grid-template-columns:1fr}
+  .evidence-pair{grid-template-columns:1fr}.proof img,.evidence-pair .proof img{height:auto;max-height:620px}
+  .compare-table{display:block;background:transparent;border:0;overflow:visible;white-space:normal}
+  .compare-table thead{display:none}.compare-table tbody{display:grid;gap:.8rem}
+  .compare-table tr{display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .compare-table td{display:flex;justify-content:space-between;gap:1rem;text-align:right;padding:.65rem .85rem}
+  .compare-table td::before{content:attr(data-label);color:var(--slate);text-align:left}
+  .compare-table td:first-child{font-weight:500;background:var(--ice);text-align:left}.compare-table td:first-child::before{content:none}
+  .compare-table tr:last-child td{border-bottom:1px solid var(--line)}.compare-table tr td:last-child{border-bottom:0}
+  .cover h1{max-width:12ch}
+}
+@media (max-width:430px){
+  .reel-r{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:1fr 1fr}
+  .hero-cell{padding:1.15rem}.hero-cell .n{font-size:1.65rem}.kpis{grid-template-columns:1fr 1fr}
+  .kpi{padding:1.15rem 1rem}.kpi::before{left:1rem}.bar{grid-template-columns:minmax(66px,auto) 1fr minmax(48px,auto);gap:.55rem}
+}
+@media (prefers-reduced-motion:reduce){html,#deck{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.bar .fl{transition:none}}
+@media print{
+  #deck{height:auto;overflow:visible;scroll-snap-type:none}.slide{min-height:auto;page-break-after:always;padding:2rem}
+  #dots,#hud,#count,#hint,#prog,.filters{display:none}.gal{max-height:none;overflow:visible}.rv{opacity:1;transform:none}
+  .proof img{max-height:500px}.sh img{height:260px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<nav id="dots" aria-label="Navegação entre telas"></nav>
+<div id="hud" class="marca" role="img" aria-label="COUT Group"><i></i><b>COUT Group</b></div>
+<div id="count" aria-live="polite">01</div>
+<div id="hint">↓ role · setas navegam · F tela cheia</div>
+
+<main id="deck">
+<!-- 01 · CAPA -->
+<section class="slide dark cover" id="slide-01" data-t="Capa">
+  <div class="inner">
+    <div class="cover-mark marca rv" role="img" aria-label="COUT Group"><i></i><b>COUT Group</b></div>
+    <h1 class="rv" data-d="1">Dois meses.<br><em>Uma leitura completa.</em></h1>
+    <p class="lead rv" data-d="2">Relatório de Performance — 2º mês da parceria entre Orgânico Natural e COUT Group, com comparativo entre ciclos e overview consolidado.</p>
+    <div class="cover-meta rv" data-d="3">
+      <span class="chip solid">Orgânico Natural</span><span class="chip">COUT Group</span><span class="chip">@drhusseinawada</span>
+    </div>
+    <div class="cover-foot rv" data-d="4">08 de agosto a 09 de setembro de 2026 · Documento confidencial</div>
+  </div>
+</section>
+
+<!-- 02 · RESUMO EXECUTIVO M2 -->
+<section class="slide dark" id="slide-02" data-t="Resumo Mês 2">
+  <div class="inner">
+    <div class="eyebrow rv">Resumo executivo · Mês 2</div>
+    <h2 class="title rv" data-d="1">Menor escala, com <em>ação mensurável</em></h2>
+    <p class="lead rv" data-d="1">O segundo ciclo somou 72.750 visualizações nos conteúdos da parceria. O Reel manteve sinais qualitativos fortes em curtidas e compartilhamentos; os Stories levaram 1.113 cliques ao destino.</p>
+    <div class="hero-grid">
+      <div class="hero-cell rv" data-d="1"><div class="n" data-count="72750">0</div><div class="k">Visualizações</div><div class="d">40.625 no Reel + 32.125 nos Stories</div></div>
+      <div class="hero-cell rv" data-d="2"><div class="n accent">2,4 <u>mil</u></div><div class="k">Curtidas no Reel</div><div class="d">taxa de 8,2% · “Mais alto” no Instagram</div></div>
+      <div class="hero-cell rv" data-d="3"><div class="n accent">1,7 <u>mil</u></div><div class="k">Compartilhamentos no Reel</div><div class="d">taxa de 6,0% · “Mais alto” no Instagram</div></div>
+      <div class="hero-cell rv" data-d="4"><div class="n" data-count="1113">0</div><div class="k">Cliques no link</div><div class="d">gerados pela sequência de Stories</div></div>
+    </div>
+    <p class="note rv" data-d="4">Indicadores de atenção: o volume ficou abaixo do Mês 1 e 70,9% das views do Reel vieram de seguidores. Indicadores de força: 2,4 mil curtidas, 1,7 mil compartilhamentos, 475 salvamentos e 1.113 cliques via Stories.</p>
+  </div>
+</section>
+
+<!-- 03 · REEL -->
+<section class="slide dark" id="slide-03" data-t="Reel Mês 2">
+  <div class="inner">
+    <div class="eyebrow rv">Collab @drhusseinawada × @organiconatural</div>
+    <h2 class="title rv" data-d="1">O Reel do <em>segundo ciclo</em></h2>
+    <div class="rule rv" data-d="1"></div>
+    <div class="media-split">
+      <div>
+        <div class="reel rv" data-d="2">
+          <div class="reel-l"><div class="tag">Reel em colaboração</div><h3>Perigo do flúor e tireoide</h3><div class="sub">Publicado com <b>@organiconatural</b><br>Tempo médio <b>21 s</b><br>Duração <b>1 min 53 s</b></div></div>
+          <div class="reel-r">
+            <div class="rm"><div class="n accent" data-count="40625">0</div><div class="k">Visualizações</div></div>
+            <div class="rm"><div class="n" data-count="29305">0</div><div class="k">Visualizadores</div></div>
+            <div class="rm"><div class="n accent">1,7 mil</div><div class="k">Compartilhamentos</div></div>
+            <div class="rm"><div class="n">2,4 mil</div><div class="k">Curtidas</div></div>
+            <div class="rm"><div class="n" data-count="475">0</div><div class="k">Salvamentos</div></div>
+            <div class="rm"><div class="n" data-count="124">0</div><div class="k">Reposts</div></div>
+            <div class="rm"><div class="n" data-count="76">0</div><div class="k">Comentários</div></div>
+            <div class="rm"><div class="n accent" data-count="23">0</div><div class="k">Seguidores ganhos</div></div>
+          </div>
+        </div>
+        <div class="kpis rv" data-d="3" style="margin-top:.9rem">
+          <div class="kpi"><div class="n blue">143</div><div class="k">Visitas ao perfil</div><div class="d">após a visualização</div></div>
+          <div class="kpi"><div class="n">23</div><div class="k">Seguidores</div><div class="d">gerados pelo Reel</div></div>
+          <div class="kpi"><div class="n">2</div><div class="k">Cliques na bio</div><div class="d">após a visualização</div></div>
+        </div>
+      </div>
+      <figure class="proof rv" data-d="3"><img loading="lazy" src="./assets/mes2/01_reel_overview.png" alt="Print dos insights do Reel com visualizações, visualizadores, tempo médio e seguidores"><figcaption><b>Insights do Reel · visão geral</b>40.625 views · 29.305 visualizadores · 21 s · 23 seguidores</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · QUALIDADE DO REEL -->
+<section class="slide white" id="slide-04" data-t="Qualidade do Reel">
+  <div class="inner">
+    <div class="eyebrow rv">Diagnóstico de performance · Mês 2</div>
+    <h2 class="title rv" data-d="1">Compartilhar e curtir seguiram <em>acima do padrão</em></h2>
+    <p class="lead rv" data-d="1">O próprio Instagram marcou compartilhamentos, curtidas e reposts como “Mais alto”. A taxa de pulos também foi classificada como “Mais baixo”, um sinal favorável de retenção inicial.</p>
+    <div class="rule rv" data-d="1"></div>
+    <div class="bench rv" data-d="2">
+      <div class="bc"><div class="n">48,8%</div><div class="k">Reels pulados</div><div class="f dn">↓ Mais baixo</div></div>
+      <div class="bc"><div class="n">6,0%</div><div class="k">Compartilhamentos</div><div class="f up">↑ Mais alto</div></div>
+      <div class="bc"><div class="n">8,2%</div><div class="k">Curtidas</div><div class="f up">↑ Mais alto</div></div>
+      <div class="bc"><div class="n">1,6%</div><div class="k">Salvamentos</div><div class="f att">↓ Mais baixo</div></div>
+      <div class="bc"><div class="n">0,4%</div><div class="k">Reposts</div><div class="f up">↑ Mais alto</div></div>
+      <div class="bc"><div class="n">0,3%</div><div class="k">Comentários</div><div class="f att">↓ Mais baixo</div></div>
+    </div>
+    <div class="evidence-pair rv" data-d="3" style="margin-top:.9rem">
+      <figure class="proof short"><img loading="lazy" src="./assets/mes2/02_reel_views_over_time.png" alt="Print com evolução das visualizações e taxas de pulo, compartilhamento e curtidas"><figcaption><b>Views e taxas prioritárias</b>Instagram ordena as taxas por importância para o alcance.</figcaption></figure>
+      <figure class="proof short"><img loading="lazy" src="./assets/mes2/03_reel_rates_retention.png" alt="Print com taxas de salvamentos, reposts, comentários e curva de retenção"><figcaption><b>Retenção e demais taxas</b>Curva completa para um conteúdo de 1 min 53 s.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · DISTRIBUIÇÃO E AÇÕES -->
+<section class="slide dark" id="slide-05" data-t="Distribuição do Reel">
+  <div class="inner">
+    <div class="eyebrow rv">Distribuição e resposta</div>
+    <h2 class="title rv" data-d="1">O Feed concentrou <em>quatro quintos</em> das views</h2>
+    <div class="rule rv" data-d="1"></div>
+    <div class="media-split equal">
+      <div>
+        <div class="panel rv" data-d="2">
+          <div class="panel-t">Principais fontes das visualizações</div>
+          <div class="bar"><span class="lb">Feed</span><span class="tr"><i class="fl deep" data-w="80"></i></span><span class="vl">80,0%</span></div>
+          <div class="bar"><span class="lb">Perfil</span><span class="tr"><i class="fl" data-w="7.1"></i></span><span class="vl">7,1%</span></div>
+          <div class="bar"><span class="lb">Aba Reels</span><span class="tr"><i class="fl" data-w="5.2"></i></span><span class="vl">5,2%</span></div>
+          <div class="bar"><span class="lb">Stories</span><span class="tr"><i class="fl" data-w="5"></i></span><span class="vl">5,0%</span></div>
+          <div class="bar"><span class="lb">Explorar</span><span class="tr"><i class="fl" data-w=".3"></i></span><span class="vl">0,3%</span></div>
+        </div>
+        <div class="panel rv" data-d="3" style="margin-top:.9rem">
+          <div class="panel-t">Ações após a visualização</div>
+          <div class="row"><span class="k">Visitas ao perfil</span><span class="v">143</span></div><div class="row"><span class="k">Seguidores</span><span class="v">23</span></div><div class="row"><span class="k">Cliques no link da bio</span><span class="v">2</span></div>
+        </div>
+        <p class="note rv" data-d="4">O Feed foi a principal porta de entrada. Com apenas 5,5% somados entre Aba Reels e Explorar, há espaço para ampliar descoberta fora da base.</p>
+      </div>
+      <div class="evidence-pair rv" data-d="3">
+        <figure class="proof"><img loading="lazy" src="./assets/mes2/04_reel_sources.png" alt="Print com as fontes das visualizações do Reel"><figcaption><b>Fontes das views</b>Feed 80,0% · Perfil 7,1% · Aba Reels 5,2%</figcaption></figure>
+        <figure class="proof"><img loading="lazy" src="./assets/mes2/05_reel_engagement_actions.png" alt="Print com ações após a visualização e interações do Reel"><figcaption><b>Ações e interações</b>143 visitas · 23 seguidores · 2 cliques na bio</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · PÚBLICO DO REEL -->
+<section class="slide" id="slide-06" data-t="Público do Reel">
+  <div class="inner">
+    <div class="eyebrow rv">Público · Reel do Mês 2</div>
+    <h2 class="title rv" data-d="1">Feminino, brasileiro e <strong>35–54</strong></h2>
+    <div class="rule rv" data-d="1"></div>
+    <div class="media-split">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:.9rem">
+        <div class="panel rv" data-d="2"><div class="panel-t">Gênero</div><div class="bar"><span class="lb">Mulheres</span><span class="tr"><i class="fl deep" data-w="80.7"></i></span><span class="vl">80,7%</span></div><div class="bar"><span class="lb">Homens</span><span class="tr"><i class="fl" data-w="19.3"></i></span><span class="vl">19,3%</span></div></div>
+        <div class="panel rv" data-d="3"><div class="panel-t">Origem</div><div class="bar"><span class="lb">Seguidores</span><span class="tr"><i class="fl deep" data-w="70.9"></i></span><span class="vl">70,9%</span></div><div class="bar"><span class="lb">Não seguidores</span><span class="tr"><i class="fl" data-w="29.1"></i></span><span class="vl">29,1%</span></div></div>
+        <div class="panel rv" data-d="3"><div class="panel-t">Faixa etária</div><div class="bar"><span class="lb">13–17</span><span class="tr"><i class="fl" data-w="1.2"></i></span><span class="vl">0,4%</span></div><div class="bar"><span class="lb">18–24</span><span class="tr"><i class="fl" data-w="7.1"></i></span><span class="vl">2,3%</span></div><div class="bar"><span class="lb">25–34</span><span class="tr"><i class="fl" data-w="51.6"></i></span><span class="vl">16,6%</span></div><div class="bar"><span class="lb">35–44</span><span class="tr"><i class="fl deep" data-w="100"></i></span><span class="vl">32,2%</span></div><div class="bar"><span class="lb">45–54</span><span class="tr"><i class="fl deep" data-w="75.2"></i></span><span class="vl">24,2%</span></div><div class="bar"><span class="lb">55–64</span><span class="tr"><i class="fl" data-w="46.3"></i></span><span class="vl">14,9%</span></div><div class="bar"><span class="lb">65+</span><span class="tr"><i class="fl" data-w="29.2"></i></span><span class="vl">9,4%</span></div></div>
+        <div class="panel rv" data-d="4"><div class="panel-t">País</div><div class="bar"><span class="lb">Brasil</span><span class="tr"><i class="fl deep" data-w="95.3"></i></span><span class="vl">95,3%</span></div><div class="bar"><span class="lb">Portugal</span><span class="tr"><i class="fl" data-w="1.5"></i></span><span class="vl">1,5%</span></div><div class="bar"><span class="lb">EUA</span><span class="tr"><i class="fl" data-w="1"></i></span><span class="vl">1,0%</span></div><div class="bar"><span class="lb">Paraguai</span><span class="tr"><i class="fl" data-w=".3"></i></span><span class="vl">0,3%</span></div><div class="bar"><span class="lb">Itália</span><span class="tr"><i class="fl" data-w=".2"></i></span><span class="vl">0,2%</span></div></div>
+      </div>
+      <div class="evidence-pair rv" data-d="4">
+        <figure class="proof"><img loading="lazy" src="./assets/mes2/08_reel_audience_age.png" alt="Print com a faixa etária do público do Reel"><figcaption><b>Idade · Reel</b>35–44 lidera com 32,2%; 35–54 soma 56,4%.</figcaption></figure>
+        <figure class="proof"><img loading="lazy" src="./assets/mes2/10_reel_audience_gender.png" alt="Print com o gênero do público do Reel"><figcaption><b>Gênero · Reel</b>80,7% mulheres · 19,3% homens</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · STORIES -->
+<section class="slide white" id="slide-07" data-t="Stories Mês 2">
+  <div class="inner">
+    <div class="eyebrow rv">Stories · sequência com Orgânico Natural</div>
+    <h2 class="title rv" data-d="1">A intenção apareceu <em>no clique</em></h2>
+    <p class="lead rv" data-d="1">Em uma sequência, 23.006 visualizadores geraram 1.113 cliques no link e 297 toques na figurinha @organiconatural.</p>
+    <div class="rule rv" data-d="1"></div>
+    <div class="media-split">
+      <div>
+        <div class="kpis rv" data-d="2">
+          <div class="kpi"><div class="n blue" data-count="32125">0</div><div class="k">Visualizações</div><div class="d">na sequência</div></div>
+          <div class="kpi"><div class="n" data-count="23006">0</div><div class="k">Visualizadores</div><div class="d">reportados pelo Instagram</div></div>
+          <div class="kpi"><div class="n" data-count="584">0</div><div class="k">Interações</div><div class="d">361 curtidas · 14 respostas · 209 compartilhamentos</div></div>
+          <div class="kpi"><div class="n blue" data-count="1113">0</div><div class="k">Cliques no link</div><div class="d">principal ação de destino</div></div>
+          <div class="kpi g"><div class="n green" data-count="297">0</div><div class="k">Toques na figurinha</div><div class="d">@organiconatural</div></div>
+          <div class="kpi"><div class="n" data-count="64">0</div><div class="k">Atividade do perfil</div><div class="d">60 visitas · 4 links externos</div></div>
+        </div>
+        <p class="note rv" data-d="4"><strong>1.113 cliques</strong> equivalem a 3,5 ações de link a cada 100 visualizações. É uma taxa descritiva sobre views — não uma taxa de pessoas únicas.</p>
+      </div>
+      <figure class="proof rv" data-d="3"><img loading="lazy" src="./assets/mes2/13_story_interactions_clicks.png" alt="Print com interações, cliques, toques em figurinha e navegação dos Stories"><figcaption><b>Interações e cliques</b>584 interações · 1.113 cliques · 297 toques em @organiconatural</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · NAVEGAÇÃO STORIES -->
+<section class="slide dark" id="slide-08" data-t="Navegação nos Stories">
+  <div class="inner">
+    <div class="eyebrow rv">Comportamento nos Stories</div>
+    <h2 class="title rv" data-d="1">A maior parte da navegação foi <em>avanço</em></h2>
+    <div class="rule rv" data-d="1"></div>
+    <div class="media-split equal">
+      <div>
+        <div class="panel rv" data-d="2">
+          <div class="panel-t">Navegação · 28.531 ações</div>
+          <div class="bar"><span class="lb">Avanço</span><span class="tr"><i class="fl deep" data-w="77.4"></i></span><span class="vl">22.092</span></div>
+          <div class="bar"><span class="lb">Voltar</span><span class="tr"><i class="fl" data-w="12.1"></i></span><span class="vl">3.464</span></div>
+          <div class="bar"><span class="lb">Saiu</span><span class="tr"><i class="fl" data-w="8.8"></i></span><span class="vl">2.513</span></div>
+          <div class="bar"><span class="lb">Próximo story</span><span class="tr"><i class="fl" data-w="1.6"></i></span><span class="vl">462</span></div>
+        </div>
+        <div class="panel rv" data-d="3" style="margin-top:.9rem">
+          <div class="panel-t">Distribuição e atividade</div>
+          <div class="row"><span class="k">Views · seguidores / não seguidores</span><span class="v">97,9% / 2,1%</span></div>
+          <div class="row"><span class="k">Interações · seguidores / não seguidores</span><span class="v">98,5% / 1,5%</span></div>
+          <div class="row"><span class="k">Visitas ao perfil</span><span class="v">60</span></div>
+          <div class="row"><span class="k">Toques em links externos</span><span class="v">4</span></div>
+          <div class="row"><span class="k">Seguidores</span><span class="v">0</span></div>
+        </div>
+        <p class="note rv" data-d="4">A sequência funcionou sobretudo como ativação da base existente: 97,9% das visualizações vieram de seguidores.</p>
+      </div>
+      <figure class="proof rv" data-d="3"><img loading="lazy" src="./assets/mes2/14_story_navigation_profile.png" alt="Print com a navegação e a atividade do perfil nos Stories"><figcaption><b>Navegação e perfil</b>22.092 avanços · 3.464 voltas · 2.513 saídas · 462 próximos stories</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · PÚBLICO STORIES -->
+<section class="slide" id="slide-09" data-t="Público dos Stories">
+  <div class="inner">
+    <div class="eyebrow rv">Público · Stories do Mês 2</div>
+    <h2 class="title rv" data-d="1">A concentração do público ficou <strong>ainda mais clara</strong></h2>
+    <div class="rule rv" data-d="1"></div>
+    <div class="media-split">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:.9rem">
+        <div class="panel rv" data-d="2"><div class="panel-t">Gênero</div><div class="bar"><span class="lb">Mulheres</span><span class="tr"><i class="fl deep" data-w="92.4"></i></span><span class="vl">92,4%</span></div><div class="bar"><span class="lb">Homens</span><span class="tr"><i class="fl" data-w="7.6"></i></span><span class="vl">7,6%</span></div></div>
+        <div class="panel rv" data-d="3"><div class="panel-t">País</div><div class="bar"><span class="lb">Brasil</span><span class="tr"><i class="fl deep" data-w="96.7"></i></span><span class="vl">96,7%</span></div><div class="bar"><span class="lb">Portugal</span><span class="tr"><i class="fl" data-w="1"></i></span><span class="vl">1,0%</span></div><div class="bar"><span class="lb">EUA</span><span class="tr"><i class="fl" data-w=".7"></i></span><span class="vl">0,7%</span></div><div class="bar"><span class="lb">Paraguai</span><span class="tr"><i class="fl" data-w=".3"></i></span><span class="vl">0,3%</span></div><div class="bar"><span class="lb">Reino Unido</span><span class="tr"><i class="fl" data-w=".1"></i></span><span class="vl">0,1%</span></div></div>
+        <div class="panel rv" data-d="4" style="grid-column:1/-1"><div class="panel-t">Faixa etária</div><div class="bar"><span class="lb">13–17</span><span class="tr"><i class="fl" data-w=".2"></i></span><span class="vl">0,1%</span></div><div class="bar"><span class="lb">18–24</span><span class="tr"><i class="fl" data-w="3.7"></i></span><span class="vl">1,6%</span></div><div class="bar"><span class="lb">25–34</span><span class="tr"><i class="fl" data-w="41.6"></i></span><span class="vl">18,0%</span></div><div class="bar"><span class="lb">35–44</span><span class="tr"><i class="fl deep" data-w="100"></i></span><span class="vl">43,3%</span></div><div class="bar"><span class="lb">45–54</span><span class="tr"><i class="fl deep" data-w="57.7"></i></span><span class="vl">25,0%</span></div><div class="bar"><span class="lb">55–64</span><span class="tr"><i class="fl" data-w="21.2"></i></span><span class="vl">9,2%</span></div><div class="bar"><span class="lb">65+</span><span class="tr"><i class="fl" data-w="6.5"></i></span><span class="vl">2,8%</span></div></div>
+      </div>
+      <div class="evidence-pair rv" data-d="4">
+        <figure class="proof"><img loading="lazy" src="./assets/mes2/15_story_audience_gender.png" alt="Print com o gênero do público dos Stories"><figcaption><b>Gênero · Stories</b>92,4% mulheres</figcaption></figure>
+        <figure class="proof"><img loading="lazy" src="./assets/mes2/17_story_audience_age.png" alt="Print com a idade do público dos Stories"><figcaption><b>Idade · Stories</b>35–54 soma 68,3% da audiência</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · LEITURA ESTRATÉGICA -->
+<section class="slide dark" id="slide-10" data-t="Leitura estratégica">
+  <div class="inner">
+    <div class="eyebrow rv">Leitura estratégica · Mês 2</div>
+    <h2 class="title rv" data-d="1">O que os dados <em>pedem agora</em></h2>
+    <div class="rule rv" data-d="1"></div>
+    <div class="insights">
+      <article class="insight rv" data-d="1"><div class="i">01</div><h4>O Reel continuou compartilhável</h4><p>1,7 mil compartilhamentos e taxa de 6,0%, classificada como “Mais alto”, confirmam propensão ao repasse.</p></article>
+      <article class="insight rv" data-d="2"><div class="i">02</div><h4>Descoberta fora da base é a alavanca</h4><p>70,9% das views do Reel e 97,9% das views dos Stories vieram de seguidores.</p></article>
+      <article class="insight rv" data-d="3"><div class="i">03</div><h4>Stories mostraram intenção concreta</h4><p>1.113 cliques no link e 297 toques em @organiconatural transformaram atenção em ação.</p></article>
+      <article class="insight rv" data-d="1"><div class="i">04</div><h4>O recorte feminino é consistente</h4><p>Mulheres foram 80,7% no Reel e 92,4% nos Stories — aderência clara à comunicação.</p></article>
+      <article class="insight rv" data-d="2"><div class="i">05</div><h4>O núcleo está entre 35 e 54 anos</h4><p>A faixa representa 56,4% do Reel e 68,3% dos Stories no segundo ciclo.</p></article>
+      <article class="insight rv" data-d="3"><div class="i">06</div><h4>O mercado permanece concentrado no Brasil</h4><p>Brasil responde por 95,3% do Reel e 96,7% dos Stories.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · COMPARATIVO REEL VOLUME -->
+<section class="slide white" id="slide-11" data-t="Comparativo do Reel">
+  <div class="inner">
+    <div class="eyebrow rv">Comparativo · Reel</div>
+    <h2 class="title rv" data-d="1">Mês 1 × Mês 2: <em>volume</em></h2>
+    <p class="lead rv" data-d="1">O Mês 1 foi um ponto fora da curva de alcance. No segundo ciclo, os resultados absolutos recuaram, sem apagar sinais de qualidade do conteúdo.</p>
+    <div class="rule rv" data-d="1"></div>
+    <div class="compare-grid rv" data-d="2">
+      <div class="compare-card"><div class="metric">Visualizações</div><div class="periods"><div class="period"><small>Mês 1</small><b>408.405</b></div><div class="period"><small>Mês 2</small><b>40.625</b></div></div><span class="delta down">−90,1%</span></div>
+      <div class="compare-card"><div class="metric">Visualizadores reportados</div><div class="periods"><div class="period"><small>Mês 1</small><b>291.336</b></div><div class="period"><small>Mês 2</small><b>29.305</b></div></div><span class="delta down">−89,9%</span></div>
+      <div class="compare-card"><div class="metric">Compartilhamentos</div><div class="periods"><div class="period"><small>Mês 1</small><b>27,6 mil</b></div><div class="period"><small>Mês 2</small><b>1,7 mil</b></div></div><span class="delta down">≈ −93,8%</span></div>
+      <div class="compare-card"><div class="metric">Curtidas</div><div class="periods"><div class="period"><small>Mês 1</small><b>15,5 mil</b></div><div class="period"><small>Mês 2</small><b>2,4 mil</b></div></div><span class="delta down">≈ −84,5%</span></div>
+      <div class="compare-card"><div class="metric">Salvamentos</div><div class="periods"><div class="period"><small>Mês 1</small><b>4,3 mil</b></div><div class="period"><small>Mês 2</small><b>475</b></div></div><span class="delta down">≈ −89,0%</span></div>
+      <div class="compare-card"><div class="metric">Seguidores gerados</div><div class="periods"><div class="period"><small>Mês 1</small><b>365</b></div><div class="period"><small>Mês 2</small><b>23</b></div></div><span class="delta down">−93,7%</span></div>
+      <div class="compare-card"><div class="metric">Visitas ao perfil</div><div class="periods"><div class="period"><small>Mês 1</small><b>997</b></div><div class="period"><small>Mês 2</small><b>143</b></div></div><span class="delta down">−85,7%</span></div>
+      <div class="compare-card"><div class="metric">Tempo médio</div><div class="periods"><div class="period"><small>Mês 1</small><b>24 s</b></div><div class="period"><small>Mês 2</small><b>21 s</b></div></div><span class="delta down">−12,5%</span></div>
+    </div>
+    <p class="note rv" data-d="3">Curtidas e compartilhamentos são exibidos com a precisão fornecida pelo Instagram. As variações marcadas com “≈” usam 15,5 mil, 27,6 mil, 2,4 mil e 1,7 mil como valores aproximados.</p>
+  </div>
+</section>
+
+<!-- 12 · COMPARATIVO TAXAS -->
+<section class="slide" id="slide-12" data-t="Comparativo de taxas">
+  <div class="inner">
+    <div class="eyebrow rv">Comparativo · Qualidade do Reel</div>
+    <h2 class="title rv" data-d="1">Menos alcance; <strong>maior taxa de curtida</strong></h2>
+    <p class="lead rv" data-d="1">Percentuais não foram somados: cada linha compara os dois períodos em pontos percentuais.</p>
+    <div class="rule rv" data-d="1"></div>
+    <div class="compare-grid rv" data-d="2">
+      <div class="compare-card"><div class="metric">Taxa de curtidas</div><div class="periods"><div class="period"><small>Mês 1</small><b>5,1%</b></div><div class="period"><small>Mês 2</small><b>8,2%</b></div></div><span class="delta up">+3,1 p.p.</span></div>
+      <div class="compare-card"><div class="metric">Taxa de compartilhamentos</div><div class="periods"><div class="period"><small>Mês 1</small><b>9,1%</b></div><div class="period"><small>Mês 2</small><b>6,0%</b></div></div><span class="delta down">−3,1 p.p.</span></div>
+      <div class="compare-card"><div class="metric">Taxa de salvamentos</div><div class="periods"><div class="period"><small>Mês 1</small><b>1,4%</b></div><div class="period"><small>Mês 2</small><b>1,6%</b></div></div><span class="delta up">+0,2 p.p.</span></div>
+      <div class="compare-card"><div class="metric">Taxa de reposts</div><div class="periods"><div class="period"><small>Mês 1</small><b>0,4%</b></div><div class="period"><small>Mês 2</small><b>0,4%</b></div></div><span class="delta same">estável</span></div>
+      <div class="compare-card"><div class="metric">Taxa de comentários</div><div class="periods"><div class="period"><small>Mês 1</small><b>0,2%</b></div><div class="period"><small>Mês 2</small><b>0,3%</b></div></div><span class="delta up">+0,1 p.p.</span></div>
+      <div class="compare-card"><div class="metric">Taxa de reels pulados</div><div class="periods"><div class="period"><small>Mês 1</small><b>41,9%</b></div><div class="period"><small>Mês 2</small><b>48,8%</b></div></div><span class="delta down">+6,9 p.p. · atenção</span></div>
+    </div>
+    <div class="context-strip rv" data-d="3">
+      <div><b>8,2%</b><span>taxa de curtidas no Mês 2, “Mais alto” no benchmark do Instagram</span></div>
+      <div><b>6,0%</b><span>taxa de compartilhamentos no Mês 2, também “Mais alto”</span></div>
+      <div><b>48,8%</b><span>taxa de pulos no Mês 2; maior que no Mês 1, embora “Mais baixo” no benchmark próprio</span></div>
+    </div>
+    <p class="note rv" data-d="4">Os rótulos “Mais alto” e “Mais baixo” são comparações do Instagram com o histórico do perfil em cada captura; não significam que os dois períodos usaram exatamente o mesmo benchmark.</p>
+  </div>
+</section>
+
+<!-- 13 · COMPARATIVO STORIES -->
+<section class="slide white" id="slide-13" data-t="Comparativo dos Stories">
+  <div class="inner">
+    <div class="eyebrow rv">Comparativo · Stories</div>
+    <h2 class="title rv" data-d="1">Totais diferentes; <em>cadências diferentes</em></h2>
+    <p class="lead rv" data-d="1">O Mês 1 teve três sequências; o Mês 2 teve uma. Por isso, o total mensal deve ser lido junto da média por sequência.</p>
+    <div class="rule rv" data-d="1"></div>
+    <table class="compare-table rv" data-d="2">
+      <thead><tr><th>Métrica</th><th>Mês 1 · total</th><th>Mês 2 · total</th><th>Variação total</th><th>M1 · média/seq.</th><th>M2 · por seq.</th><th>Variação normalizada</th></tr></thead>
+      <tbody>
+        <tr><td>Visualizações</td><td data-label="Mês 1 · total">108.365</td><td data-label="Mês 2 · total">32.125</td><td data-label="Variação total" class="muted">−70,4%</td><td data-label="M1 · média/seq.">36.122</td><td data-label="M2 · por seq.">32.125</td><td data-label="Variação normalizada" class="focus">−11,1%</td></tr>
+        <tr><td>Interações</td><td data-label="Mês 1 · total">2.015</td><td data-label="Mês 2 · total">584</td><td data-label="Variação total" class="muted">−71,0%</td><td data-label="M1 · média/seq.">672</td><td data-label="M2 · por seq.">584</td><td data-label="Variação normalizada" class="focus">−13,1%</td></tr>
+        <tr><td>Compartilhamentos</td><td data-label="Mês 1 · total">657</td><td data-label="Mês 2 · total">209</td><td data-label="Variação total" class="muted">−68,2%</td><td data-label="M1 · média/seq.">219</td><td data-label="M2 · por seq.">209</td><td data-label="Variação normalizada" class="focus">−4,6%</td></tr>
+        <tr><td>Visitas ao perfil</td><td data-label="Mês 1 · total">361</td><td data-label="Mês 2 · total">60</td><td data-label="Variação total" class="muted">−83,4%</td><td data-label="M1 · média/seq.">120</td><td data-label="M2 · por seq.">60</td><td data-label="Variação normalizada" class="focus">−50,1%</td></tr>
+        <tr><td>Cliques no link</td><td data-label="Mês 1 · total">5.697</td><td data-label="Mês 2 · total">1.113</td><td data-label="Variação total" class="muted">−80,5%</td><td data-label="M1 · média/seq.">2.849*</td><td data-label="M2 · por seq.">1.113</td><td data-label="Variação normalizada" class="focus">−60,9%</td></tr>
+      </tbody>
+    </table>
+    <div class="context-strip rv" data-d="3">
+      <div><b>3 sequências</b><span>Mês 1 · duas tinham link direto</span></div><div><b>1 sequência</b><span>Mês 2 · com link e figurinha da marca</span></div><div><b>−4,6%</b><span>compartilhamentos por sequência, o indicador mais estável</span></div>
+    </div>
+    <p class="note rv" data-d="4">* Para cliques, a média do Mês 1 usa apenas as duas sequências que tinham link: 5.697 ÷ 2 = 2.848,5, exibido como 2.849.</p>
+  </div>
+</section>
+
+<!-- 14 · OVERVIEW -->
+<section class="slide dark" id="slide-14" data-t="Overview de 2 meses">
+  <div class="inner">
+    <div class="eyebrow rv">Overview geral · 10 jul a 09 set</div>
+    <h2 class="title rv" data-d="1">Dois meses de parceria, <em>somados com critério</em></h2>
+    <div class="rule rv" data-d="1"></div>
+    <div class="hero-grid">
+      <div class="hero-cell rv" data-d="1"><div class="n" data-count="589520">0</div><div class="k">Views de conteúdo</div><div class="d">449.030 em Reels + 140.490 em Stories</div></div>
+      <div class="hero-cell rv" data-d="2"><div class="n accent" data-count="6810">0</div><div class="k">Cliques via Stories</div><div class="d">direcionados à Orgânico Natural</div></div>
+      <div class="hero-cell rv" data-d="3"><div class="n accent">≈30,2 <u>mil</u></div><div class="k">Compartilhamentos</div><div class="d">≈29,3 mil em Reels + 866 em Stories</div></div>
+      <div class="hero-cell rv" data-d="4"><div class="n" data-count="388">0</div><div class="k">Seguidores via Reels</div><div class="d">365 no Mês 1 + 23 no Mês 2</div></div>
+    </div>
+    <div class="kpis rv" data-d="3" style="margin-top:.9rem">
+      <div class="kpi"><div class="n blue">449.030</div><div class="k">Views de Reels</div><div class="d">408.405 + 40.625</div></div>
+      <div class="kpi"><div class="n">320.641</div><div class="k">Visualizadores reportados</div><div class="d">soma dos períodos; pode haver usuários repetidos</div></div>
+      <div class="kpi"><div class="n">23,7 s</div><div class="k">Tempo médio ponderado</div><div class="d">ponderado pelas views de cada Reel</div></div>
+      <div class="kpi"><div class="n">1.561</div><div class="k">Visitas aos perfis</div><div class="d">Reels + Stories nos dois meses</div></div>
+      <div class="kpi"><div class="n">1.324</div><div class="k">Reposts dos Reels</div><div class="d">1.200 + 124</div></div>
+      <div class="kpi"><div class="n">4.775</div><div class="k">Salvamentos dos Reels</div><div class="d">4.300 + 475</div></div>
+      <div class="kpi"><div class="n">2.599</div><div class="k">Interações nos Stories</div><div class="d">2.015 + 584</div></div>
+      <div class="kpi g"><div class="n green">297</div><div class="k">Toques em @organiconatural</div><div class="d">dado disponível no Mês 2</div></div>
+    </div>
+    <p class="note rv" data-d="4">Não foram somados percentuais nem pessoas únicas. Os ≈30,2 mil compartilhamentos combinam formatos diferentes, identificados acima, e usam valores abreviados nos Reels. As 864 mil impressões estimadas de WhatsApp pertencem apenas ao Mês 1 e ficam fora do comparativo por ausência de base equivalente no Mês 2.</p>
+  </div>
+</section>
+
+<!-- 15 · APRENDIZADOS -->
+<section class="slide" id="slide-15" data-t="Aprendizados dos 2 meses">
+  <div class="inner">
+    <div class="eyebrow rv">Aprendizados consolidados</div>
+    <h2 class="title rv" data-d="1">O que permanece <strong>válido após dois ciclos</strong></h2>
+    <div class="rule rv" data-d="1"></div>
+    <div class="insights">
+      <article class="insight rv" data-d="1"><div class="i">01</div><h4>Compartilhamento é a assinatura do formato</h4><p>Os Reels acumularam aproximadamente 29,3 mil compartilhamentos; nos dois ciclos, a taxa ficou acima do padrão do perfil.</p></article>
+      <article class="insight rv" data-d="2"><div class="i">02</div><h4>Escala e eficiência precisam ser lidas separadamente</h4><p>O Mês 2 perdeu volume, mas elevou a taxa de curtidas de 5,1% para 8,2%.</p></article>
+      <article class="insight rv" data-d="3"><div class="i">03</div><h4>Stories são o principal canal de tráfego direto</h4><p>6.810 cliques acumulados, sem misturar os 20 cliques de bio gerados após os Reels.</p></article>
+      <article class="insight rv" data-d="1"><div class="i">04</div><h4>A audiência central permaneceu aderente</h4><p>Mulheres, 35–54 anos e Brasil dominaram os recortes nos dois períodos.</p></article>
+      <article class="insight rv" data-d="2"><div class="i">05</div><h4>A cadência explica parte da queda em Stories</h4><p>Por sequência, views caíram 11,1% e compartilhamentos 4,6%; o total mensal caiu mais porque houve menos sequências.</p></article>
+      <article class="insight rv" data-d="3"><div class="i">06</div><h4>Próximo ganho: ampliar não seguidores</h4><p>Mais distribuição em Aba Reels e Explorar pode recuperar escala sem perder o alinhamento de público.</p></article>
+    </div>
+    <p class="note rv" data-d="4"><strong>Conclusão executiva:</strong> a parceria provou capacidade de alcance no Mês 1 e manteve sinais de relevância e ação no Mês 2. O próximo ciclo deve combinar a eficiência criativa observada com maior cadência e distribuição fora da base.</p>
+  </div>
+</section>
+
+<!-- 16 · EVIDÊNCIAS -->
+<section class="slide white" id="slide-16" data-t="Evidências Mês 2">
+  <div class="inner">
+    <div class="eyebrow rv">Evidências · Mês 2</div>
+    <h2 class="title rv" data-d="1">Todos os dados, <strong>nos prints de origem</strong></h2>
+    <p class="lead rv" data-d="1">17 capturas reais do Instagram. Clique em qualquer imagem para ampliar sem corte.</p>
+    <div class="rule rv" data-d="1"></div>
+    <div class="filters rv" data-d="2"><button class="ft on" type="button" data-f="all">Todos · 17</button><button class="ft" type="button" data-f="reel">Reel · 10</button><button class="ft" type="button" data-f="stories">Stories · 7</button></div>
+    <div class="gal rv" data-d="3" id="gal"></div>
+  </div>
+</section>
+
+<!-- 17 · FECHAMENTO -->
+<section class="slide dark cover" id="slide-17" data-t="Fechamento">
+  <div class="inner">
+    <div class="eyebrow rv">COUT × Orgânico Natural</div>
+    <h2 class="title rv" data-d="1">O dado aponta o caminho.<br><em>O próximo ciclo executa.</em></h2>
+    <p class="lead rv" data-d="2">Mais cadência nos Stories, distribuição do Reel para além da base e rastreamento de cada destino: três decisões objetivas para transformar relevância em escala mensurável.</p>
+    <div class="cover-meta rv" data-d="3"><span class="chip solid">589.520 views</span><span class="chip">6.810 cliques</span><span class="chip">≈30,2 mil compartilhamentos</span></div>
+    <div class="cover-foot rv" data-d="4">COUT Group · Relatório de Performance · 2 meses · Documento confidencial</div>
+  </div>
+</section>
+</main>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Visualização ampliada da evidência"><span class="x" aria-hidden="true">×</span><img alt=""><div class="lbcap"></div></div>
+
+<script>
+(function(){
+'use strict';
+var P='./assets/mes2/';
+var SHOTS=[
+ ['reel','01_reel_overview.png','Reel · visão geral','40.625 views · 29.305 visualizadores · 21 s · 23 seguidores'],
+ ['reel','02_reel_views_over_time.png','Reel · views e taxas','Pulos 48,8% · compartilhamentos 6,0% · curtidas 8,2%'],
+ ['reel','03_reel_rates_retention.png','Reel · retenção','Salvamentos 1,6% · reposts 0,4% · comentários 0,3%'],
+ ['reel','04_reel_sources.png','Reel · fontes','Feed 80,0% · Perfil 7,1% · Aba Reels 5,2%'],
+ ['reel','05_reel_engagement_actions.png','Reel · ações','143 visitas · 23 seguidores · 2 cliques na bio'],
+ ['reel','06_reel_engagement_details.png','Reel · engajamento','1,7 mil compartilhamentos · 475 salvamentos'],
+ ['reel','07_reel_audience_age_partial.png','Reel · origem do público','70,9% seguidores · 29,1% não seguidores'],
+ ['reel','08_reel_audience_age.png','Reel · idade','35–44 com 32,2% · 45–54 com 24,2%'],
+ ['reel','09_reel_audience_country.png','Reel · país','Brasil 95,3% · Portugal 1,5% · EUA 1,0%'],
+ ['reel','10_reel_audience_gender.png','Reel · gênero','80,7% mulheres · 19,3% homens'],
+ ['stories','11_story_overview.png','Stories · visão geral','32.125 visualizações · 584 interações · atividade 64'],
+ ['stories','12_story_followers_interactions.png','Stories · distribuição','23.006 visualizadores · 97,9% seguidores nas views'],
+ ['stories','13_story_interactions_clicks.png','Stories · ações','1.113 cliques · 297 toques em @organiconatural'],
+ ['stories','14_story_navigation_profile.png','Stories · navegação','28.531 navegações · 60 visitas ao perfil'],
+ ['stories','15_story_audience_gender.png','Stories · gênero','92,4% mulheres · 7,6% homens'],
+ ['stories','16_story_audience_country.png','Stories · país','Brasil 96,7% · Portugal 1,0% · EUA 0,7%'],
+ ['stories','17_story_audience_age.png','Stories · idade','35–44 com 43,3% · 45–54 com 25,0%']
+];
+var gal=document.getElementById('gal');
+SHOTS.forEach(function(s){
+  var a=document.createElement('figure');a.className='sh';a.dataset.g=s[0];
+  a.innerHTML='<img loading="lazy" src="'+P+s[1]+'" alt="'+s[2]+'"><figcaption class="cap"><b>'+s[2]+'</b>'+s[3]+'</figcaption>';
+  a.tabIndex=0;a.setAttribute('role','button');a.setAttribute('aria-label','Ampliar '+s[2]);
+  function show(){openLb(P+s[1],s[2]+' — '+s[3])}
+  a.addEventListener('click',show);a.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});gal.appendChild(a);
+});
+document.querySelectorAll('.ft').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.ft').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var f=b.dataset.f;gal.querySelectorAll('.sh').forEach(function(c){c.style.display=(f==='all'||c.dataset.g===f)?'':'none'});gal.scrollTop=0})});
+var lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),lbCap=lb.querySelector('.lbcap');
+function openLb(src,cap){lbImg.src=src;lbImg.alt=cap;lbCap.textContent=cap;lb.classList.add('on')}
+function closeLb(){lb.classList.remove('on');lbImg.src='';lbImg.alt=''}
+lb.addEventListener('click',closeLb);
+var deck=document.getElementById('deck'),slides=Array.prototype.slice.call(document.querySelectorAll('.slide')),dots=document.getElementById('dots'),prog=document.getElementById('prog'),hud=document.getElementById('hud'),cnt=document.getElementById('count'),hint=document.getElementById('hint'),cur=-1;
+slides.forEach(function(s,i){var d=document.createElement('b');d.title=s.dataset.t||('Tela '+(i+1));d.setAttribute('aria-label','Ir para '+d.title);d.tabIndex=0;d.addEventListener('click',function(){go(i)});d.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go(i)}});dots.appendChild(d)});
+var dotEls=Array.prototype.slice.call(dots.children);
+function go(i){i=Math.max(0,Math.min(slides.length-1,i));slides[i].scrollIntoView({behavior:'smooth',block:'start'})}
+function sync(){var top=deck.scrollTop,best=0,bd=Infinity;slides.forEach(function(s,i){var d=Math.abs(s.offsetTop-top);if(d<bd){bd=d;best=i}});if(best!==cur){cur=best;dotEls.forEach(function(d,i){d.classList.toggle('on',i===cur)});cnt.textContent=String(cur+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');var dark=slides[cur].classList.contains('dark');hud.classList.toggle('inv',dark);cnt.classList.toggle('inv',dark)}var max=deck.scrollHeight-deck.clientHeight;prog.style.width=(max>0?(top/max*100):0)+'%';if(top>40)hint.style.opacity='0'}
+deck.addEventListener('scroll',sync,{passive:true});sync();
+document.addEventListener('keydown',function(e){if(lb.classList.contains('on')){if(e.key==='Escape')closeLb();return}var k=e.key;if(k==='ArrowDown'||k==='ArrowRight'||k==='PageDown'||k===' '){if(!/^(INPUT|BUTTON)$/.test(e.target.tagName)){e.preventDefault();go(cur+1)}}else if(k==='ArrowUp'||k==='ArrowLeft'||k==='PageUp'){e.preventDefault();go(cur-1)}else if(k==='Home'){e.preventDefault();go(0)}else if(k==='End'){e.preventDefault();go(slides.length-1)}else if(k==='f'||k==='F'){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen()}});
+function fmt(n,mode){if(mode==='mi')return[(n/1e6).toFixed(1).replace('.',','),'mi'];if(mode==='mil'){var k=n/1000;return[k<100?k.toFixed(1).replace('.',','):Math.round(k).toLocaleString('pt-BR'),'mil']}return[Math.round(n).toLocaleString('pt-BR'),'']}
+function paint(el,n){var p=fmt(n,el.dataset.fmt||'');el.innerHTML=(el.dataset.pre||'')+p[0]+(el.dataset.suf||'')+(p[1]?'<u>'+p[1]+'</u>':'')}
+function countUp(el){var target=parseFloat(el.dataset.count),t0=null,dur=1100;function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1);paint(el,target*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(!en.isIntersecting)return;var el=en.target;el.classList.add('in');el.querySelectorAll('[data-count]').forEach(function(n){if(n.dataset.done)return;n.dataset.done='1';if(reduce)paint(n,parseFloat(n.dataset.count));else countUp(n)});io.unobserve(el)})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var io2=new IntersectionObserver(function(entries){entries.forEach(function(en){if(!en.isIntersecting)return;var n=en.target;if(!n.dataset.done){n.dataset.done='1';if(reduce)paint(n,parseFloat(n.dataset.count));else countUp(n)}io2.unobserve(n)})},{threshold:.35});
+document.querySelectorAll('[data-count]').forEach(function(n){io2.observe(n)});
+var io3=new IntersectionObserver(function(entries){entries.forEach(function(en){if(!en.isIntersecting)return;var f=en.target;f.style.width=f.dataset.w+'%';io3.unobserve(f)})},{threshold:.25});
+document.querySelectorAll('.fl[data-w]').forEach(function(f){io3.observe(f)});
+function revealNow(scope){scope.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});scope.querySelectorAll('[data-count]').forEach(function(n){n.dataset.done='1';paint(n,parseFloat(n.dataset.count))});scope.querySelectorAll('.fl[data-w]').forEach(function(f){f.style.width=f.dataset.w+'%'})}
+function openHash(){if(!location.hash)return;var target=document.querySelector(location.hash);if(target){target.scrollIntoView({behavior:'auto',block:'start'});revealNow(target);sync()}}
+window.addEventListener('hashchange',openHash);setTimeout(openHash,80);
+window.addEventListener('beforeprint',function(){revealNow(document);});
+})();
+</script>
+</body>
+</html>
