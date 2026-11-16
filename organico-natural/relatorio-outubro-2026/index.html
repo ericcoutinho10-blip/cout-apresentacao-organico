@@ -232,7 +232,65 @@ button{font:inherit}
   #dots,#hud,#count,#hint,#prog,.filters{display:none}.gal{max-height:none;overflow:visible}.rv{opacity:1;transform:none}
   .proof img{max-height:500px}.sh img{height:260px}
 }
-.proof-crop{display:flex;flex-direction:column;max-width:350px;width:100%;margin:0 auto}.proof-crop .shot-wrap{height:clamp(280px,52vh,520px);overflow:hidden;background:#fff;border-radius:12px;display:flex;justify-content:center;align-items:flex-start}.proof-crop img{width:auto!important;max-width:100%;height:calc(100% + 30px);object-fit:contain;object-position:top;transform:translateY(-30px);border:0!important;border-radius:0!important}.proof-crop figcaption{font-size:.78rem!important}.evidence-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;max-width:840px;margin:1rem auto}.evidence-pair .proof{margin:0 auto}@media(max-width:650px){.evidence-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}.proof-crop{padding:.35rem!important}.proof-crop .shot-wrap{height:40vh}.proof-crop img{height:calc(100% + 20px);transform:translateY(-20px)}.proof-crop figcaption{font-size:.65rem!important}}
+/* Prints de evidência: ampliação real, enquadramento e corte da barra do celular */
+.evidence-pair{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1.35rem;
+  width:min(100%,1010px);
+  max-width:1010px;
+  margin:1.1rem auto;
+  align-items:stretch;
+}
+.evidence-pair .proof.proof-crop{
+  width:100%;
+  max-width:none;
+  display:flex;
+  flex-direction:column;
+  padding:.8rem;
+  margin:0;
+  overflow:hidden;
+}
+.proof-crop .shot-wrap{
+  position:relative;
+  width:100%;
+  height:clamp(355px,54vh,530px);
+  overflow:hidden;
+  background:#fff;
+  border-radius:13px;
+  display:block;
+}
+.proof-crop .shot-wrap img{
+  display:block;
+  position:relative;
+  width:185%!important;
+  max-width:none!important;
+  height:auto!important;
+  min-height:0!important;
+  margin-left:-42.5%!important;
+  transform:translateY(-77px)!important;
+  transform-origin:center top;
+  object-fit:unset!important;
+  border:0!important;
+  border-radius:0!important;
+}
+.proof-crop figcaption{
+  flex:0 0 auto;
+  padding:.75rem .25rem .15rem!important;
+  font-size:.78rem!important;
+}
+@media (max-width:650px){
+  .evidence-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem;}
+  .evidence-pair .proof.proof-crop{padding:.36rem!important}
+  .proof-crop .shot-wrap{height:clamp(235px,40vh,390px)}
+  .proof-crop .shot-wrap img{
+    width:185%!important;
+    margin-left:-42.5%!important;
+    transform:translateY(-35px)!important;
+  }
+  .proof-crop figcaption{font-size:.66rem!important}
+}
+
 </style>
 </head>
 <body>
