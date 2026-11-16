@@ -239,12 +239,12 @@ button{font:inherit}
 .evidence-metrics .hero-cell{min-height:125px}
 .evidence-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;align-items:start}
 .evidence-images .proof.proof-crop{padding:.5rem;max-width:none;width:100%;margin:0;overflow:hidden}
-.proof-crop .shot-wrap{height:clamp(290px,43vh,415px);background:#fff;border-radius:11px;overflow:hidden;position:relative}
-.proof-crop .shot-wrap img{display:block!important;width:132%!important;max-width:none!important;height:auto!important;min-height:0!important;margin:0 0 0 -16%!important;object-fit:unset!important;object-position:top center!important;transform:translateY(var(--crop-offset,-80px))!important;border:0!important;border-radius:0!important}
+.proof-crop .shot-wrap{background:#fff;border-radius:14px;overflow:hidden}
+.proof-crop .shot-wrap img{display:block;width:100%;height:min(46vh,430px);max-width:100%;object-fit:contain;object-position:center;transform:none;margin:0;background:#fff;border-radius:14px}
 .proof-crop figcaption{padding:.6rem .15rem .1rem!important;font-size:.66rem!important;line-height:1.35}
 .proof-crop figcaption b{font-size:.69rem!important}
-@media(max-width:900px){.evidence-layout{grid-template-columns:1fr}.evidence-images{max-width:650px;width:100%;margin:auto}.proof-crop .shot-wrap{height:360px}}
-@media(max-width:600px){.evidence-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}.evidence-metrics .hero-cell{min-height:95px;padding:.7rem}.evidence-images{gap:.45rem}.evidence-images .proof.proof-crop{padding:.35rem}.proof-crop .shot-wrap{height:260px}.proof-crop .shot-wrap img{transform:translateY(calc(var(--crop-offset,-80px)*.58))!important}.proof-crop figcaption{font-size:.6rem!important}}
+@media(max-width:900px){.evidence-layout{grid-template-columns:1fr}.evidence-images{max-width:650px;width:100%;margin:auto}.proof-crop .shot-wrap img{height:min(52vh,460px)}}
+@media(max-width:600px){.evidence-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}.evidence-metrics .hero-cell{min-height:95px;padding:.7rem}.evidence-images{gap:.45rem}.evidence-images .proof.proof-crop{padding:.35rem}.proof-crop .shot-wrap img{height:min(34vh,300px)}.proof-crop figcaption{font-size:.6rem!important}}
 
 </style>
 </head>
