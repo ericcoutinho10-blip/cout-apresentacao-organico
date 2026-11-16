@@ -232,63 +232,59 @@ button{font:inherit}
   #dots,#hud,#count,#hint,#prog,.filters{display:none}.gal{max-height:none;overflow:visible}.rv{opacity:1;transform:none}
   .proof img{max-height:500px}.sh img{height:260px}
 }
-/* Prints de evidência: ampliação real, enquadramento e corte da barra do celular */
+/* Evidências no mesmo padrão compacto do relatório de dois meses */
 .evidence-pair{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:1.35rem;
-  width:min(100%,1010px);
-  max-width:1010px;
-  margin:1.1rem auto;
-  align-items:stretch;
+  gap:1rem;
+  max-width:800px;
+  width:100%;
+  margin:1rem auto;
+  align-items:start;
 }
 .evidence-pair .proof.proof-crop{
   width:100%;
-  max-width:none;
+  max-width:360px;
+  margin:0 auto;
+  padding:.7rem;
   display:flex;
   flex-direction:column;
-  padding:.8rem;
-  margin:0;
   overflow:hidden;
 }
 .proof-crop .shot-wrap{
   position:relative;
+  display:block;
   width:100%;
-  height:clamp(355px,54vh,530px);
+  height:clamp(280px,39vh,365px);
+  border-radius:12px;
   overflow:hidden;
   background:#fff;
-  border-radius:13px;
-  display:block;
 }
 .proof-crop .shot-wrap img{
-  display:block;
   position:relative;
-  width:185%!important;
-  max-width:none!important;
-  height:auto!important;
+  display:block;
+  width:100%!important;
+  max-width:100%!important;
   min-height:0!important;
-  margin-left:-42.5%!important;
-  transform:translateY(-77px)!important;
-  transform-origin:center top;
+  height:auto!important;
+  margin:0!important;
   object-fit:unset!important;
+  object-position:top center;
+  transform:translateY(-34px)!important;
   border:0!important;
   border-radius:0!important;
 }
 .proof-crop figcaption{
-  flex:0 0 auto;
-  padding:.75rem .25rem .15rem!important;
-  font-size:.78rem!important;
+  padding:.65rem .35rem .25rem!important;
+  font-size:.72rem!important;
+  line-height:1.5;
 }
-@media (max-width:650px){
-  .evidence-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem;}
-  .evidence-pair .proof.proof-crop{padding:.36rem!important}
-  .proof-crop .shot-wrap{height:clamp(235px,40vh,390px)}
-  .proof-crop .shot-wrap img{
-    width:185%!important;
-    margin-left:-42.5%!important;
-    transform:translateY(-35px)!important;
-  }
-  .proof-crop figcaption{font-size:.66rem!important}
+@media(max-width:650px){
+  .evidence-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+  .evidence-pair .proof.proof-crop{padding:.4rem}
+  .proof-crop .shot-wrap{height:clamp(190px,29vh,270px)}
+  .proof-crop .shot-wrap img{transform:translateY(-18px)!important}
+  .proof-crop figcaption{font-size:.63rem!important}
 }
 
 </style>
